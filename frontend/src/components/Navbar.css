@@ -1,0 +1,126 @@
+.navbar {
+  background: var(--color-primary);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar__logo-icon {
+  font-size: 1.8rem;
+}
+
+.navbar__logo-text span {
+  color: var(--color-accent);
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navbar__link {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s;
+}
+
+.navbar__link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar__link--active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar__link--cart {
+  position: relative;
+}
+
+.navbar__cart-badge {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.navbar__toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__nav {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--color-primary);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+    transform: translateY(-120%);
+    transition: transform 0.3s;
+    box-shadow: var(--shadow-md);
+  }
+
+  .navbar__nav--open {
+    transform: translateY(0);
+  }
+
+  .navbar__link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+}
