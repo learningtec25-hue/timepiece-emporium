@@ -1,32 +1,8 @@
 # Timepiece Emporium
 
-A polished watch-selling storefront built with React and an Express API.
+A frontend-only React watch store preview. Product data, cart behavior, filtering, and mock checkout all run in the browser—no backend is required.
 
-## Features
-
-- Luxury editorial-style homepage
-- Watch catalog with search and filters
-- Product detail pages with specifications and stock
-- Persistent local shopping cart
-- Checkout form with order validation
-- Order confirmation screen
-- Product and order REST API
-
-## Run locally
-
-### 1. Start the backend
-
-```bash
-cd backend
-npm install
-npm start
-```
-
-The API runs at `http://localhost:5000`.
-
-### 2. Start the frontend
-
-In a second terminal:
+## Run the frontend
 
 ```bash
 cd frontend
@@ -34,16 +10,16 @@ npm install
 npm start
 ```
 
-The storefront runs at `http://localhost:3000`.
+Open http://localhost:3000.
 
-## API endpoints
+## Included
 
-- `GET /api/products`
-- `GET /api/products/:id`
-- `GET /api/filters`
-- `POST /api/orders`
-- `GET /api/orders/:id`
+- Luxury watch-store homepage
+- Featured products and categories
+- Search and filters
+- Product detail pages
+- Persistent browser cart
+- Mock checkout and order confirmation
+- Responsive desktop and mobile layout
 
-## Production notes
-
-This version uses an in-memory order store and mock checkout flow. Before accepting real payments, connect a payment provider such as Stripe, move products and orders into a database, add authentication/admin inventory management, and configure production environment variables.
+Checkout is a demo flow and does not process real payments.
